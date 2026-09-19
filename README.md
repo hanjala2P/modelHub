@@ -1,17 +1,55 @@
-# React + Vite
+# 3D Model Hub (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the frontend of **3D Model Hub** — a modern, responsive web application built for 3D artists, developers, and creators to browse, download, manage, and share premium 3D models, sci-fi characters, and game-ready environments.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- **Explore Latest Models:** Browse recently uploaded 3D assets with rich metadata, descriptions, and view counts.
+- **Search & Filtering:** Real-time search functionality to quickly find specific models or categories.
+- **Detailed View Page:** View comprehensive asset information, download counts, and category tags.
+- **User Authentication:** Secure login and registration powered by **Firebase Auth** (supports Email/Password and Google Sign-in).
+- **Cart Management:** Add models to your cart and manage them seamlessly.
+- **Personal Dashboard:** 
+  - View your account metadata and login history (`UserProfile`).
+  - Manage and track your uploaded models (`MyModels`).
+  - Access your download history (`Download`).
+- **Interactive UI & Animations:** Built with modern glassmorphic design principles, smooth framer-motion transitions, and responsive Tailwind CSS layout.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# modelHub
+- **React.js** (Vite)
+- **Tailwind CSS** & **DaisyUI**
+- **React Router** (for dynamic client-side routing)
+- **Firebase Authentication**
+- **Framer Motion** (for animations)
+- **React Toastify & Hot Toast** (for notifications)
+- **SweetAlert2** (for confirmation popups)
+- **React Icons**
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+├── Components/
+│   ├── Cards/         # ModelCard component
+│   └── Hero/          # Hero section component
+├── Context/
+│   └── AuthContext.jsx # Global authentication state provider
+├── Firebase/
+│   └── firebase.config.js # Firebase initialization
+├── Pages/
+│   ├── AllModels.jsx  # Browse all models & search
+│   ├── LatestModels.jsx # Landing page latest models feed
+│   ├── ViewDetails.jsx # Single model view & download/delete actions
+│   ├── MyModels.jsx   # User's uploaded models management
+│   ├── Download.jsx   # User's download history
+│   ├── Login.jsx      # Authentication login page
+│   └── UserProfile.jsx # User profile dashboard & stats
+├── App.jsx            # Main app router wrapper
+└── main.jsx           # App entry point
